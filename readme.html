@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aurna Lightbox</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+	<style>
+		html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif, siyam rupali;}
+		.zui-table {
+			border: solid 1px #DDEEEE;
+			border-collapse: collapse;
+			border-spacing: 0;
+			font: normal 13px Arial, sans-serif;
+		}
+		.zui-table thead th {
+			background-color: #DDEFEF;
+			border: solid 1px #DDEEEE;
+			color: #336B6B;
+			padding: 10px;
+			text-align: left;
+			text-shadow: 1px 1px 1px #fff;
+		}
+		.zui-table tbody td {
+			border: solid 1px #DDEEEE;
+			color: #333;
+			padding: 10px;
+			text-shadow: 1px 1px 1px #fff;
+		}
+	</style>
+</head>
+<body>
+	<link href='aurna-lightbox.css' rel='stylesheet'/>
+	<script src="aurna-lightbox.js"></script>
+	<center>
+	</br>
+	</br>
+	</br>
+	<h1>Aurna Lightbox</h1>
+	<h4>Simple HTML Lightbox for Iframes, HTML and Confirm Dialogue Boxes.</h4>
+	<h4>No JQuery required, simple and lite script. Easy to Use.</h4>
+	<table>
+		<tbody>	
+			<td><b>Responses to Keyboard Events (Pressing ESC will hide Light Box)</b></br>
+			Hiding an Iframe will continue to run the Iframe in the background untill a new<code id="htmlViewer" style="color:rgb(68, 68, 68); font-weight:400;background-color:rgb(240, 240, 240);background:rgb(240, 240, 240);padding: .5em;"><span style="color:rgb(68, 68, 68); font-weight:700;">aurnaIframe</span>()</code> is called.</br>
+				<small>This might sounds like a bug, but some people might want to process Ajax Form Submission or other processes run in the background untill it is completed.</br>
+						If you have control over the Iframed page, than you can call <code id="htmlViewer" style="color:rgb(68, 68, 68); font-weight:400;background-color:rgb(240, 240, 240);background:rgb(240, 240, 240);padding: .5em;"><span style="color:rgb(68, 68, 68); font-weight:700;">parent</span><span style="color:rgb(136, 0, 0); font-weight:400;">.hideIframe</span>()</code> to call the parent page to hide the Iframe.</small>
+			</td>
+		</tbody>
+	</table>
+	</br>
+	</br>
+	<h2>Demo</h2>
+	<table class="zui-table">
+    <thead>
+        <tr>
+            <th>Demo</th>
+            <th>Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><button onclick="aurnaIframe('https://lite.cnn.com/en')">Click This Button to open CNN Lite!</button></br></td>
+            <td>
+				<pre><code id="htmlViewer" style="color:rgb(68, 68, 68); font-weight:400;background-color:rgb(240, 240, 240);background:rgb(240, 240, 240);display:block;padding: .5em;"><span style="color:rgb(68, 68, 68); font-weight:400;">&lt;</span>button onclick<span style="color:rgb(68, 68, 68); font-weight:400;">=</span><span style="color:rgb(136, 0, 0); font-weight:400;">&quot;aurna(&#x27;https://lite.cnn.com/en&#x27;)&quot;</span><span style="color:rgb(68, 68, 68); font-weight:400;">&gt;</span><span style="color:rgb(136, 0, 0); font-weight:400;">Click</span> <span style="color:rgb(136, 0, 0); font-weight:400;">Me</span> to <span style="color:rgb(68, 68, 68); font-weight:700;">open</span> <span style="color:rgb(136, 0, 0); font-weight:400;">CNN</span> <span style="color:rgb(136, 0, 0); font-weight:400;">Lite</span>!&lt;/button&gt;</code></pre>
+			</td>
+        </tr>
+        <tr>
+            <td><a href="javascript:aurnaIframe('https://lite.cnn.com/en')">Click This Anchor to open CNN Lite!</a></br></td>
+            <td>
+				<pre><code id="htmlViewer" style="color:rgb(68, 68, 68); font-weight:400;background-color:rgb(240, 240, 240);background:rgb(240, 240, 240);display:block;padding: .5em;"><span style="color:rgb(68, 68, 68); font-weight:400;">&lt;</span>a href<span style="color:rgb(68, 68, 68); font-weight:400;">=</span><span style="color:rgb(136, 0, 0); font-weight:400;">&quot;javascript:aurna(&#x27;https://lite.cnn.com/en&#x27;)&quot;</span><span style="color:rgb(68, 68, 68); font-weight:400;">&gt;</span><span style="color:rgb(136, 0, 0); font-weight:400;">Click</span> <span style="color:rgb(136, 0, 0); font-weight:400;">This</span> <span style="color:rgb(136, 0, 0); font-weight:400;">Anchor</span> to <span style="color:rgb(68, 68, 68); font-weight:700;">open</span> <span style="color:rgb(136, 0, 0); font-weight:400;">CNN</span> <span style="color:rgb(136, 0, 0); font-weight:400;">Lite</span>!&lt;/a&gt;</code></pre>
+			</td>
+        </tr>
+        <tr>
+            <td><a href="javascript:aurnaIframe('demo.html')">Click This Anchor to open Demo with Hide Button!</a></br></td>
+            <td>
+				<pre><code id="htmlViewer" style="color:rgb(68, 68, 68); font-weight:400;background-color:rgb(240, 240, 240);background:rgb(240, 240, 240);display:block;padding: .5em;"><span style="color:rgb(68, 68, 68); font-weight:400;">&lt;</span>a href<span style="color:rgb(68, 68, 68); font-weight:400;">=</span><span style="color:rgb(136, 0, 0); font-weight:400;">&quot;javascript:aurna(&#x27;https://lite.cnn.com/en&#x27;)&quot;</span><span style="color:rgb(68, 68, 68); font-weight:400;">&gt;</span><span style="color:rgb(136, 0, 0); font-weight:400;">Click</span> <span style="color:rgb(136, 0, 0); font-weight:400;">This</span> <span style="color:rgb(136, 0, 0); font-weight:400;">Anchor</span> to <span style="color:rgb(68, 68, 68); font-weight:700;">open</span> <span style="color:rgb(136, 0, 0); font-weight:400;">CNN</span> <span style="color:rgb(136, 0, 0); font-weight:400;">Lite</span>!&lt;/a&gt;</code></pre>
+			</td>
+        </tr>
+    </tbody>
+</table>
+
+ 
+	
+	</center>
+	
+</body>
+</html>
